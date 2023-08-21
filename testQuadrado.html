@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Color on Click</title>
+  <style>
+    .quadrado {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="quadrado" onclick="mudarCor(this)"></div>
+
+  <div class="quadrado" onclick="mudarCorc(this)"></div>
+
+  <script>
+    function mudarCor(elemento) {
+      const cores = ["red", "white"];
+      const corAtual = elemento.style.backgroundColor;
+      const novaCor = cores[(cores.indexOf(corAtual) + 1) % cores.length];
+      elemento.style.backgroundColor = novaCor;
+    }
+
+    function mudarCorc(elemento) {
+      const cores = ["lawngreen"];
+      const corAtual = elemento.style.backgroundColor;
+      const novaCor = cores[(cores.indexOf(corAtual) + 1) % cores.length];
+      elemento.style.backgroundColor = novaCor;
+    }   
+  </script>
+</body>
+
+
+
+</html>
